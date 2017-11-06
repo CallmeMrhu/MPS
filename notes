@@ -1,0 +1,37 @@
+music play sequence
+
+word embedding techniques：
+    1、estimate the similarity between songs.
+    2、similarity embedded into matrix factorization to boost the latent feature learning and discovery.
+
+use song2vec to estimate the similarity between songs
+
+1、MF：discover the latent feature vectors
+            of users and items based on the user-item interaction
+                      matrix,which only records the preference/interaction times of users on items
+
+2、build upon the standard MF model
+            by integrating the information in MPS（music play sequence）
+                                to facilitate more effective feature learning
+
+
+song2vec music similarity
+      the skip-gram negative sampling (SGNS)：capture the relation between a word and surrounding words in sentence
+
+lastfm-dataset-1K/userid-timestamp-artid-artname-traid-traname.tsv
+     大约2000万条数据
+lastfm-dataset-1K/userid-timestamp-artid-1000.csv
+     大约100万条数据(927879, 3)，去重后(925537, 3)，其中第3列为空的有34153行，即有效数据891384行
+     从原始数据中，每个用户取前一千条数据构成csv文件进行代码预测试
+lastfm-dataset-1K/userid-timestamp-artid-500.csv
+     user : 992     ----- 989
+     songs :28808   ----- ???
+
+2017.10.13 21:55
+    there are something which are going to be work at next step:
+        1、build music sequence according to timestamp
+        2、perfect the MPS_MF.py accoding to the formula on the paper
+        3、test the MPS_MF.py by server
+        4、every step is necessary to build my castle！go ahead！
+
+
